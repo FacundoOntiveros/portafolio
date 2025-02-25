@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from "../components/Badge.astro";
+import LinkedInicon from "../icons/LinkedIn.astro";
+import Githubicon from "../icons/Github.astro";
+import Emailicon from "../icons/Email.astro";
+import InformationLink from "../components/InformationLink.astro"
+import "../styles/global.css";
+---
+
+<Layout title='Portafolio de Facundo Ontiveros - Desarrollador web' 
+description='Me especializo en crear interfaces web modernas y responsivas.'>
+	<main>
+		<section class="w-full lg:w-[740px] mx-auto py-44">
+		<h1 class="text-white text-6xl font-bold flex flex-row gap-x-4 pb-10">
+			Hola, soy Facundo 
+			<a href="https://www.linkedin.com/in/facundoontiveros/" class="flex justify-center items-center">
+				<Badge>Disponible para trabajar</Badge>
+			</a>
+		</h1>
+			<h2 class="text-white text-xl opacity-80 text-wrap pb-4">
+				Desarrollador y Programador Web de Buenos Aires, Argentina. <br> 
+				Me especializo en crear interfaces web modernas y responsivas.
+			</h2>
+
+			<nav class="flex gap-x-2">
+				<InformationLink href="https://www.linkedin.com/in/facundoontiveros/">
+					<LinkedInicon class="size-6"/>
+						LinkedIn
+				</InformationLink>
+				<InformationLink  href="https://github.com/FacundoOntiveros">
+					<Githubicon class="size-6"/>
+						Github
+				</InformationLink>
+				<InformationLink>
+					<Emailicon class="size-6" href=""/>
+						Ontiverosfacundo@gmail.com
+				</InformationLink>
+			</nav>
+			
+		</section>
+	</main>
+</Layout>
