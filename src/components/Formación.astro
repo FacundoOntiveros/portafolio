@@ -1,0 +1,30 @@
+---
+import FormaciónItems from "./FormaciónItems.astro"
+const FORMACIÓN = [
+    {
+        Date:"2025 (en curso)",
+        Title:"Programador - Centro de Formación Laboral N° 401",
+        Description:"Capacitación en desarrollo de software con enfoque en lógica de programación, algoritmos y estructuras de datos. Se trabajan lenguajes y herramientas fundamentales para la creación de aplicaciones, fomentando buenas prácticas y resolución de problemas."
+    },
+    {
+        Date:"2022",
+        Title:"Diplomatura de Desarrollo Web Fullstack - Academia Numen",
+        Description:"Formación integral en desarrollo web, abordando tecnologías frontend y backend. Se trabajó con HTML, CSS, JavaScript, React, Node.js, bases de datos y metodologías ágiles. El curso incluyó prácticas en proyectos reales para afianzar conocimientos y desarrollar aplicaciones web completas."
+    },
+    {
+        Date:"2021",
+        Title:"Diseño de páginas web - Centro de Formación Laboral N° 401",
+        Description:"Curso introductorio al desarrollo web, enfocado en los fundamentos de HTML, CSS y principios de diseño responsivo. Se exploraron herramientas y buenas prácticas para la creación de sitios web funcionales y accesibles."
+    }
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4">   
+    {
+        FORMACIÓN.map((formación) => ( 
+            <li class="mb-10 ms-6">
+                <FormaciónItems { ...formación }/>
+            </li>
+        ))
+    }               
+</ol>
+
