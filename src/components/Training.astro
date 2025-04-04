@@ -1,6 +1,6 @@
 ---
-import FormaciónItems from "./FormaciónItems.astro"
-const FORMACIÓN = [
+import Trainingitems from "./TrainingItems.astro"
+const TRAINING = [
     {
         Date:"2025 (en curso)",
         Title:"Programador - Centro de Formación Laboral N° 401",
@@ -20,9 +20,9 @@ const FORMACIÓN = [
 ---
 <ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4">   
     {
-        FORMACIÓN.map((formación) => ( 
+        TRAINING.map((training) => ( 
             <li class="mb-10 ms-6">
-                <FormaciónItems { ...formación }/>
+                <Trainingitems { ...training }/>
             </li>
         ))
     }               

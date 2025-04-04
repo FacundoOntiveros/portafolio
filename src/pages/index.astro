@@ -5,8 +5,10 @@ import LinkedInicon from "../icons/LinkedIn.astro";
 import Githubicon from "../icons/Github.astro";
 import Emailicon from "../icons/Email.astro";
 import InformationLink from "../components/InformationLink.astro";
-import Formación from "../components/Formación.astro";
-import Formaciónícono from "../icons/ÍconoFormación.astro";
+import Training from "../components/Training.astro";
+import TrainingIcon from "../icons/TrainingIcon.astro";
+import Project from "../components/Projects.astro";
+import ProjectIcon from "../icons/ProjectIcon.astro";
 import "../styles/global.css";
 import SectionContainer from '../components/SectionContainer.astro';
 ---
@@ -21,7 +23,7 @@ description='Me especializo en crear interfaces web modernas y responsivas.'>
 				<Badge>Disponible para trabajar</Badge>
 			</a>
 		</h1>
-			<h2 class="text-white text-xl opacity-80 text-wrap pb-4">
+			<h2 class="text-white text-xl opacity-95 text-wrap pb-5">
 				<span class="font-semibold text-yellow-200">Desarrollador y Programador Web</span> de Buenos Aires, Argentina. <br> 
 				Me especializo en crear interfaces web modernas y responsivas.
 			</h2>
@@ -41,12 +43,20 @@ description='Me especializo en crear interfaces web modernas y responsivas.'>
 				</InformationLink>
 			</nav>
 		</SectionContainer>
-		<SectionContainer id="formación" class="pt-5">
-		<h2 class="text-white text-2xl font-bold flex gap-x-3 pb-10">
-			<Formaciónícono class="size-7 mt-0.5"/>
-			Educación y Capacitación
+		<SectionContainer id="formación" class="pt-5 pb-20">
+			<h2 class="text-white text-3xl font-bold flex gap-x-3 pb-10">
+				<TrainingIcon class="size-7 mt-0.5"/>
+				Educación y Capacitación
 			</h2>
-			<Formación />
+			<Training />
+		</SectionContainer>
+
+		<SectionContainer id="proyectos" class="pt-5">
+			<h2 class="text-white text-3xl font-bold flex gap-x-3 pb-10">
+				<ProjectIcon class="size-7 mt-0.5"/>
+				Proyectos Web
+			</h2>
+			<Project />
 		</SectionContainer>
 	</main>
 </Layout>

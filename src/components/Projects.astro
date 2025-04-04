@@ -1,0 +1,98 @@
+---
+import Html5 from "../icons/Html5.astro";
+import Css3 from "../icons/Css3.astro";
+import Javascript from "../icons/Javascript.astro";
+import React from "../icons/React.astro";
+import TailwindCss from "../icons/TailwindCss.astro";
+import WordPress from "../icons/WordPress.astro";
+import Elementor from "../icons/Elementor.astro"
+import Gutenberg from "../icons/Gutenberg.astro";
+
+const TAGS = { 
+    HTML5: {
+        name: "Html5",
+        class: "bg-white/8 text-white",
+        icon: Html5,
+    },
+    CSS3: {
+        name: "Css3",
+        class:"bg-white/8 text-white",
+        icon: Css3,
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "bg-white/8 text-white",
+        icon: Javascript,
+    },
+    REACT: {
+        name: "React",
+        class: "bg-white/8 text-white",
+        icon: React,
+    },
+    TAILWINDCSS: {
+        name: "TailwindCss",
+        class: "bg-white/8 text-white",
+        icon: TailwindCss,
+    },
+    WORDPRESS: {
+        name: "WordPress",
+        class: "bg-white/8 text-white",
+        icon: WordPress,
+    },
+    ELEMENTOR: {
+        name: "Elementor",
+        class: "bg-white/8 text-white",
+        icon: Elementor,
+    },
+    GUTENBERG: {
+        name: "Gutenberg",
+        class:"bg-white/8 text-white",
+        icon: Gutenberg,
+    },
+}
+
+const PROJECTS = [ 
+    {
+        title: "Sitio Web para Distribuidora de Jamón Crudo",
+        description: "Diseñé y desarrollé esta página web para un cliente dedicado a la venta y distribución de jamón crudo. La web ofrece una interfaz atractiva y funcional, destacando la calidad del producto y facilitando la navegación para clientes interesados en realizar consultas o compras. Implementé un diseño responsive, optimización para SEO y una estructura intuitiva para mejorar la experiencia del usuario.",
+        link: "https://jamonxjamon-arg.com/",
+        github: "",
+        image: "/Projects/JamónxJamón.webp",
+        tags: [TAGS.HTML5, TAGS.CSS3, TAGS.JAVASCRIPT, TAGS.REACT, TAGS.TAILWINDCSS],
+    },
+    {
+        title: "Sitio de Noticias en WordPress con Radio Online",
+        description: "Diseñé y desarrollé un sitio web de noticias en WordPress utilizando el editor Elementor, optimizando su diseño y funcionalidad mediante la personalización de temas y plugins. Implementé una radio online en vivo, permitiendo a los usuarios acceder a transmisiones en tiempo real directamente desde la plataforma. Priorizando una experiencia fluida y accesible, aseguré una navegación óptima en todos los dispositivos. Además, realicé un trabajo integral de optimización SEO, mejorando la visibilidad y el posicionamiento del sitio en buscadores para atraer más tráfico orgánico.",
+        link: "https://portalcanuelas.com.ar/",
+        github: "",
+        image: "/Projects/PortalCañuelas.webp",
+        tags: [TAGS.WORDPRESS, TAGS.ELEMENTOR, TAGS.CSS3, TAGS.JAVASCRIPT],
+    },
+    {
+        title: "Sitio Web Corporativo en WordPress con Gutenberg",
+        description: "Diseñé y desarrollé un sitio web para fotógrafo profesional en WordPress utilizando el editor Gutenberg, asegurando una estructura optimizada y de fácil navegación. La plataforma incorpora una plantilla eficiente que integra galerías de imágenes, un formulario de contacto y secciones informativas para que los usuarios puedan solicitar presupuestos y contratar servicios de manera sencilla. El sitio está completamente finalizado y listo para su lanzamiento en la web.",
+        link: "https://jamonxjamon-arg.com/",
+        github: "",
+        image: "/Projects/ClickProducciones.webp",
+        tags: [TAGS.WORDPRESS, TAGS.GUTENBERG, TAGS.CSS3],
+    }
+];
+---
+
+{PROJECTS.map(({ title, description, tags, image }) => (
+    <article class="text-base font-medium text-white pb-20">
+        <h3 class="text-2xl pb-4 font-bold text-amber-200">{title}</h3>
+        <p class="text-lg pb-10 font-medium text-white text-pretty">{description}</p>
+        <ul class="flex flex-row gap-x-3 pb-5 items-center">
+            {tags.map((tag) => 
+                <li>
+                <span class={`flex gap-x-2 rounded-full border border-white/10 text-medium font-semibold place-items-center ${tag.class} py-1 px-2`}>
+                <tag.icon class="size-6 py-0.5"/> 
+                {tag.name}
+                </span>
+                </li>
+            )}
+        </ul>
+        <img class="h-auto w-auto" src={image} alt={`Captura de pantalla del proyecto ${title}`} />
+    </article>
+))}
